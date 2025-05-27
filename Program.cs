@@ -1,6 +1,9 @@
-﻿UseInterface useInterface = new();
+﻿UseInterface useInterface = new(new Hojlund());
+useInterface.PlayerName();
 
-
+var orderProcessor = new OrderProcessor(new ShippingCalculator());
+var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f};
+orderProcessor.Process(order);
 public class UseInterface
 {
     private readonly IStriker _striker;
