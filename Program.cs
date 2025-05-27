@@ -1,4 +1,5 @@
-﻿
+﻿UseInterface useInterface = new();
+
 
 public class UseInterface
 {
@@ -10,7 +11,7 @@ public class UseInterface
     public void PlayerName()
     {
 
-        Console.WriteLine("Player name is {0}", _striker.Name());
+        Console.WriteLine("Player name is {0}", _striker.Name);
     }
 }
 
