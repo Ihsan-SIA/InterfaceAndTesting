@@ -1,11 +1,10 @@
-﻿Hojlund hojlund = new Hojlund() { Name = "Hojlund" };
-UseInterface useInterface = new(hojlund);
-
-
+﻿UseInterface useInterface = new(new Hojlund());
 useInterface.PlayerName();
 
-
-public class UseInterface
+var orderProcessor = new OrderProcessor(new ShippingCalculator());
+var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f};
+orderProcessor.Process(order);
+public class UseInterface 
 {
     private readonly IStriker _striker;
     public UseInterface(IStriker striker)
@@ -35,7 +34,7 @@ public interface ICaptain
 
 public class Hojlund : IStriker
 {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; } = "Hojlund";
 
     public void DefendIfPossible()
     {
