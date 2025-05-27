@@ -11,6 +11,11 @@ public interface IStriker
     void SomeAssists();
     void DefendIfPossible();
 }
+public interface ICaptain
+{
+    void ManageTeam();
+    void TalkToReferee();
+}
 
 public class Hojlund : IStriker
 {
@@ -33,8 +38,16 @@ public class Hojlund : IStriker
         Console.WriteLine("I made 5 assists this season");
     }
 }
-public class Mbappe : IStriker
+public class Mbappe : IStriker, ICaptain
 {
+    public void ManageTeam()
+    {
+        Console.WriteLine("Everybody must be in order");
+    }
+    public void TalkToReferee()
+    {
+        Console.WriteLine("Make ref no sha do us ojoro");
+    }
     public string Name { get; set; } = default!;
     public void DefendIfPossible()
     {
