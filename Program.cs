@@ -1,4 +1,6 @@
-﻿UseInterface useInterface = new(new Hojlund());
+﻿List<string> ints = [1, 2, 3];
+
+UseInterface useInterface = new(new Hojlund());
 useInterface.PlayerName();
 
 var orderProcessor = new OrderProcessor(new ShippingCalculator());
