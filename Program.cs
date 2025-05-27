@@ -16,11 +16,11 @@ public class Hojlund : IStriker
 
     public void ScoreGoals()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("I scored 15 goals this season");
     }
 
     public void SomeAssists()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("I made 5 assists this season");
     }
 }
