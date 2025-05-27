@@ -7,10 +7,7 @@ mbappe.SomeAssists();
 public interface IStriker
 {
     string Name { get; set; }
-    void ScoreGoals()
-    {
-        Console.WriteLine("Just fkin score man");
-    }
+    void ScoreGoals();
     void SomeAssists();
     void DefendIfPossible();
 }
@@ -26,8 +23,10 @@ public class Hojlund : IStriker
         Console.WriteLine("My name is {0}", Name);
     }
 
-    public extern void ScoreGoals();
-    
+    public void ScoreGoals()
+    {
+        Console.WriteLine("I scored 15 goals this season");
+    }
 
     public void SomeAssists()
     {
