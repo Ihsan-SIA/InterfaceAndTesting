@@ -1,8 +1,19 @@
-﻿var hojlund = new Hojlund();
-hojlund.DefendIfPossible();
-var mbappe = new Mbappe();
-mbappe.ScoreGoals();
-mbappe.SomeAssists();
+﻿
+
+public class UseInterface
+{
+    private readonly IStriker _striker;
+    public UseInterface(IStriker striker)
+    {
+        _striker = striker;
+    }
+    public void PlayerName()
+    {
+
+        Console.WriteLine("Player name is {0}", _striker.Name());
+    }
+}
+
 
 public interface IStriker
 {
